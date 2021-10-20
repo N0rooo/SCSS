@@ -1,3 +1,11 @@
+// ********************************************
+// USE INCLUDE
+// *******************************************
+
+
+
+
+
 *{
     padding:0;
     margin: 0;
@@ -40,35 +48,36 @@ header{
         
     }
 }
+
+
 section:nth-of-type(1){
-    
-    
     display: flex;
     justify-content: center;
     flex-direction: column;
 
     & .title{
         width: 100%;
-        height: 90vh;
+        height: 500px;
         // background-color:rgb(30, 30, 30);
         // background-image: url(../rendu_SCSS/img/dev_bck.PNG);
-        background-color: rgb(219, 209, 255);
+        background-color: rgb(103, 101, 101);
         background-size: cover;
+        background-image: url(https://media.istockphoto.com/photos/developer-screen-with-colored-website-programming-code-picture-id1161918104?b=1&k=20&m=1161918104&s=170667a&w=0&h=NG2dfcrxrW0ZWtf2vkicNatgUx5nNRZyT-b0-hvJELs=);
+        background-attachment: fixed;
+        background-blend-mode:multiply;
         object-fit: cover ;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction:column;
-        color: rgb(24, 24, 50);
+        color: rgb(219, 209, 255);
         background-position: center;
         // filter: saturate(10%);
         
         
-
-        
         & div{
             width: 800px;
-            border: solid 3px rgb(29, 29, 49);
+            border: solid 3px rgb(219, 209, 255);;
             height: 50%;
             border-radius: 10%;
             display: flex;
@@ -83,19 +92,87 @@ section:nth-of-type(1){
 }
 
 section:nth-of-type(2){
-    background-color: rgb(219, 209, 255);
-    margin-top: 150px;
+    background-color: rgb(29, 29, 49);
     // margin-top: 150px;
     
-    & article:nth-of-type(1){
+    & .description{
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         padding: 30px;
-        color: rgb(29, 29, 49);
-        filter: contrast(80%);
+        color: rgb(219, 209, 255);
+
+            & div:nth-of-type(1){
+                width: 150px;
+                height: 150px;
+                background-color: bisque;
+                border-radius: 50%;
+                background-image: url(../rendu_SCSS/img/profil.jpg);
+                background-size: cover;
+            }
+            & p{
+                padding: 20px;
+            }
+        
     }
 }
+
+.section{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    
+    margin: 40px 0;
+    
+    // background-image: url(https://media.istockphoto.com/photos/developer-screen-with-colored-website-programming-code-picture-id1161918104?b=1&k=20&m=1161918104&s=170667a&w=0&h=NG2dfcrxrW0ZWtf2vkicNatgUx5nNRZyT-b0-hvJELs=);
+        
+
+    &-1{
+        background-color: rgb(103, 101, 101);
+        background-image: url(https://media.istockphoto.com/photos/system-engineering-concept-engineer-working-in-the-office-gui-picture-id1271620065?b=1&k=20&m=1271620065&s=170667a&w=0&h=XMssvt0DHMNOkg4Bd-00N2U6MfDjiMd9fDQSEIA7Tfk=);
+        // background-attachment: fixed;
+        background-blend-mode:multiply;
+        background-size: cover;
+        color: rgb(219, 209, 255);
+        display: flex;
+        align-items: center;
+        transition: 0.5s;
+
+        & h2{
+            margin-left: 80px;
+        }
+        &:hover{
+            background-color: cornsilk;
+        }
+    }
+
+    &-2{
+        background-color: rgb(103, 101, 101);
+        background-image: url(https://media.istockphoto.com/photos/system-engineering-concept-engineer-working-in-the-office-gui-picture-id1271620065?b=1&k=20&m=1271620065&s=170667a&w=0&h=XMssvt0DHMNOkg4Bd-00N2U6MfDjiMd9fDQSEIA7Tfk=);
+        // background-attachment: fixed;
+        background-blend-mode:multiply;
+        background-size: cover;
+        color: rgb(219, 209, 255);
+        display: flex;
+        align-items: center;
+        transition: 0.5s;
+
+
+        & h2{
+            margin-left: 80px;
+        }
+
+    
+    &:hover{
+        background-color: cornsilk;
+    }
+}
+}
+
+
+
+
     .grid{
     
         height: 1000px;
