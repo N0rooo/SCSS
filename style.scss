@@ -1,22 +1,20 @@
-// ********************************************
-// USE INCLUDE
-// *******************************************
-
-
-
-
+@import 'abstract/mixins';
 
 *{
     padding:0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    transition: 0.5s;
 }
 body{
     background-color:rgb(29, 29, 49);
-    
 }
 
+a{
+    text-decoration: none;
+    color: rgb(219, 209, 255);
+}
 h1{
     font-size: 100px;
 }
@@ -28,80 +26,96 @@ h2{
 h3{
     font-size: 30px;
 }
-header{
+
+
+
+footer, header{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 70px;
     color: rgb(219, 209, 255);
-    background-attachment: fixed;
-    filter: contrast(80%);
+    background-color:rgb(29, 29, 49);
     
     & ul{
         display: flex;
         flex-direction: row;
         justify-content: center;
-    }
-    & ul li{
-        margin: 50px;
-        list-style-type: none;
-        
-    }
-}
+        cursor: pointer;
 
-
-section:nth-of-type(1){
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-    & .title{
-        width: 100%;
-        height: 500px;
-        // background-color:rgb(30, 30, 30);
-        // background-image: url(../rendu_SCSS/img/dev_bck.PNG);
-        background-color: rgb(103, 101, 101);
-        background-size: cover;
-        background-image: url(https://media.istockphoto.com/photos/developer-screen-with-colored-website-programming-code-picture-id1161918104?b=1&k=20&m=1161918104&s=170667a&w=0&h=NG2dfcrxrW0ZWtf2vkicNatgUx5nNRZyT-b0-hvJELs=);
-        background-attachment: fixed;
-        background-blend-mode:multiply;
-        object-fit: cover ;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction:column;
-        color: rgb(219, 209, 255);
-        background-position: center;
-        // filter: saturate(10%);
-        
-        
-        & div{
-            width: 800px;
-            border: solid 3px rgb(219, 209, 255);;
-            height: 50%;
-            border-radius: 10%;
+        & ul{
+            height: 70px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
-            margin-bottom: 50px;
-
+            align-items: center;
+            width: 120px;
             
         }
+        
+        
+        & ul:hover{
+            background-color: coral;
+        }
+    }
+
+    & ul li{
+        list-style-type: none;
+        margin: 0 30px;
     }
 }
-
-section:nth-of-type(2){
-    background-color: rgb(29, 29, 49);
-    // margin-top: 150px;
-    
-    & .description{
+.slide{
+    scale: 2;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.index{
+    & section:nth-of-type(1){
         display: flex;
         justify-content: center;
-        align-items: center;
         flex-direction: column;
-        padding: 30px;
-        color: rgb(219, 209, 255);
+
+        & .home{
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(103, 101, 101);
+            background-size: cover;
+            background-image: url(https://media.istockphoto.com/photos/developer-screen-with-colored-website-programming-code-picture-id1161918104?b=1&k=20&m=1161918104&s=170667a&w=0&h=NG2dfcrxrW0ZWtf2vkicNatgUx5nNRZyT-b0-hvJELs=);
+            background-attachment: fixed;
+            background-blend-mode:multiply;
+            object-fit: cover ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction:column;
+            color: rgb(219, 209, 255);
+            background-position: center;
+            
+            & div:nth-of-type(1){
+                width: 800px;
+                border: solid 3px rgb(219, 209, 255);
+                height: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 50px;
+            }
+        }
+    }
+    & section:nth-of-type(2){
+        padding: 50px;
+        margin-top: 10px;
+            
+        & .description{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px;
+            color: rgb(219, 209, 255);
+            background-color:rgb(22, 22, 37);
+            margin-bottom: 50px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 
             & div:nth-of-type(1){
                 width: 150px;
@@ -110,70 +124,51 @@ section:nth-of-type(2){
                 border-radius: 50%;
                 background-image: url(../rendu_SCSS/img/profil.jpg);
                 background-size: cover;
+                margin-top: 20px;
             }
             & p{
                 padding: 20px;
+            }    
+        }
+        & div{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            
             }
-        
+        }
+    & .section{
+        width: 100%;
+        height: 150px;
+
+        &-1{
+            @include bouton_section;
+            background-image: url(https://media.istockphoto.com/photos/system-engineering-concept-engineer-working-in-the-office-gui-picture-id1271620065?b=1&k=20&m=1271620065&s=170667a&w=0&h=XMssvt0DHMNOkg4Bd-00N2U6MfDjiMd9fDQSEIA7Tfk=);
+        }
+        &-2{
+            @include bouton_section;
+            background-image: url(https://media.istockphoto.com/photos/system-engineering-concept-engineer-working-in-the-office-gui-picture-id1271620065?b=1&k=20&m=1271620065&s=170667a&w=0&h=XMssvt0DHMNOkg4Bd-00N2U6MfDjiMd9fDQSEIA7Tfk=);
+        }
     }
 }
 
-.section{
-    display: flex;
-    width: 100%;
-    height: 150px;
-    
-    margin: 40px 0;
-    
-    // background-image: url(https://media.istockphoto.com/photos/developer-screen-with-colored-website-programming-code-picture-id1161918104?b=1&k=20&m=1161918104&s=170667a&w=0&h=NG2dfcrxrW0ZWtf2vkicNatgUx5nNRZyT-b0-hvJELs=);
-        
 
-    &-1{
-        background-color: rgb(103, 101, 101);
-        background-image: url(https://media.istockphoto.com/photos/system-engineering-concept-engineer-working-in-the-office-gui-picture-id1271620065?b=1&k=20&m=1271620065&s=170667a&w=0&h=XMssvt0DHMNOkg4Bd-00N2U6MfDjiMd9fDQSEIA7Tfk=);
-        // background-attachment: fixed;
-        background-blend-mode:multiply;
-        background-size: cover;
+.title{
+        @include title;
+
+}
+.skills{
+    
+
+    & article{
+        margin-top: 40px ;
+        margin-left: 100px;
         color: rgb(219, 209, 255);
-        display: flex;
-        align-items: center;
-        transition: 0.5s;
-
-        & h2{
-            margin-left: 80px;
-        }
-        &:hover{
-            background-color: cornsilk;
-        }
     }
-
-    &-2{
-        background-color: rgb(103, 101, 101);
-        background-image: url(https://media.istockphoto.com/photos/system-engineering-concept-engineer-working-in-the-office-gui-picture-id1271620065?b=1&k=20&m=1271620065&s=170667a&w=0&h=XMssvt0DHMNOkg4Bd-00N2U6MfDjiMd9fDQSEIA7Tfk=);
-        // background-attachment: fixed;
-        background-blend-mode:multiply;
-        background-size: cover;
-        color: rgb(219, 209, 255);
-        display: flex;
-        align-items: center;
-        transition: 0.5s;
-
-
-        & h2{
-            margin-left: 80px;
-        }
-
-    
-    &:hover{
-        background-color: cornsilk;
-    }
-}
-}
-
-
-
-
-    .grid{
+    & .grid{
     
         height: 1000px;
         display: grid;
@@ -182,37 +177,47 @@ section:nth-of-type(2){
         margin-bottom: 200px;
         
 
-        & div{
-            border-radius: 10px;
+        & fieldset{
             margin: 60px 40px;
-            background-color: rgb(192, 175, 255);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background-color: rgb(22, 22, 37);
             padding: 60px;
+            border: none;
 
+            & legend{
+                font-size: 30px;
+                color: rgb(219, 209, 255);
+            }
+
+            & p{
+                color: rgb(219, 209, 255);
+            }
         }
+        
 
 
-        & div:nth-of-type(1){
+        & fieldset:nth-of-type(1){
             grid-column: 1;
             grid-row: 1;
             margin-left: 100px;
             margin-top: 50px;
             
         }
-        & div:nth-of-type(2){
+        & fieldset:nth-of-type(2){
             grid-column: 2;
             grid-row: 1;
             margin-right: 100px;
             margin-top: 50px;
             
         }
-        & div:nth-of-type(3){
+        & fieldset:nth-of-type(3){
             grid-column: 1;
             grid-row: 2;
             margin-left: 100px;
             margin-bottom: 150px;
             
         }
-        & div:nth-of-type(4){
+        & fieldset:nth-of-type(4){
             grid-column: 2;
             grid-row: 2;
             margin-right: 100px;
@@ -220,6 +225,4 @@ section:nth-of-type(2){
         }
         
     }
-
-
-
+}

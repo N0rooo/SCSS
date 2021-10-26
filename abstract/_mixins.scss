@@ -1,0 +1,32 @@
+@mixin bouton_section {
+
+        width: 700px;
+        background-color: rgb(169, 169, 169);
+        background-blend-mode:multiply;
+        background-size: cover;
+        color: rgb(219, 209, 255);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+        &:hover{
+            border: 1px solid rgb(255, 159, 124);
+        }
+    
+}
+
+@mixin title{
+
+    width: 100%;
+    height: 30vh;
+    background-image: url(https://media.istockphoto.com/photos/developer-screen-with-colored-website-programming-code-picture-id1161918104?b=1&k=20&m=1161918104&s=170667a&w=0&h=NG2dfcrxrW0ZWtf2vkicNatgUx5nNRZyT-b0-hvJELs=);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: rgb(219, 209, 255);
+}
