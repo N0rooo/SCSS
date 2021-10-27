@@ -143,7 +143,7 @@ footer ul li, header ul li {
   justify-content: center;
   cursor: pointer;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  background-image: url(https://media.istockphoto.com/photos/system-engineering-concept-engineer-working-in-the-office-gui-picture-id1271620065?b=1&k=20&m=1271620065&s=170667a&w=0&h=XMssvt0DHMNOkg4Bd-00N2U6MfDjiMd9fDQSEIA7Tfk=);
+  background-image: url(https://images.unsplash.com/photo-1508317469940-e3de49ba902e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHNraWxscyUyMGRldnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
 }
 .index .section-1:hover {
   border: 1px solid #ff9f7c;
@@ -159,7 +159,8 @@ footer ul li, header ul li {
   justify-content: center;
   cursor: pointer;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  background-image: url(https://media.istockphoto.com/photos/system-engineering-concept-engineer-working-in-the-office-gui-picture-id1271620065?b=1&k=20&m=1271620065&s=170667a&w=0&h=XMssvt0DHMNOkg4Bd-00N2U6MfDjiMd9fDQSEIA7Tfk=);
+  background-image: url(https://images.unsplash.com/photo-1531741403586-c19915ad5d0c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGRldiUyMGNzc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+  background-position: center;
 }
 .index .section-2:hover {
   border: 1px solid #ff9f7c;
@@ -168,14 +169,18 @@ footer ul li, header ul li {
 .title {
   width: 100%;
   height: 30vh;
-  background-image: url(https://media.istockphoto.com/photos/developer-screen-with-colored-website-programming-code-picture-id1161918104?b=1&k=20&m=1161918104&s=170667a&w=0&h=NG2dfcrxrW0ZWtf2vkicNatgUx5nNRZyT-b0-hvJELs=);
+  background-color: #676565;
+  background-blend-mode: multiply;
   background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
   color: #dbd1ff;
+  background-image: url(https://images.unsplash.com/photo-1508317469940-e3de49ba902e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHNraWxscyUyMGRldnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
 }
 
 .skills article {
@@ -183,26 +188,25 @@ footer ul li, header ul li {
   margin-left: 100px;
   color: #dbd1ff;
 }
-.skills .grid {
-  height: 1000px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr, 1fr, 1fr;
-  margin-bottom: 200px;
-}
-.skills .grid fieldset {
+.skills fieldset {
   margin: 60px 40px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   background-color: #161625;
   padding: 60px;
   border: none;
 }
-.skills .grid fieldset legend {
+.skills fieldset legend {
   font-size: 30px;
   color: #dbd1ff;
 }
-.skills .grid fieldset p {
+.skills fieldset p {
   color: #dbd1ff;
+}
+.skills .grid {
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr, 1fr, 1fr;
 }
 .skills .grid fieldset:nth-of-type(1) {
   grid-column: 1;
@@ -220,13 +224,16 @@ footer ul li, header ul li {
   grid-column: 1;
   grid-row: 2;
   margin-left: 100px;
-  margin-bottom: 150px;
 }
 .skills .grid fieldset:nth-of-type(4) {
   grid-column: 2;
   grid-row: 2;
   margin-right: 100px;
-  margin-bottom: 150px;
+}
+.skills .flex {
+  height: auto;
+  display: flex;
+  margin: 0 50px 100px 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

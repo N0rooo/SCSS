@@ -146,11 +146,12 @@ footer, header{
 
         &-1{
             @include bouton_section;
-            background-image: url(https://media.istockphoto.com/photos/system-engineering-concept-engineer-working-in-the-office-gui-picture-id1271620065?b=1&k=20&m=1271620065&s=170667a&w=0&h=XMssvt0DHMNOkg4Bd-00N2U6MfDjiMd9fDQSEIA7Tfk=);
+            background-image: url(https://images.unsplash.com/photo-1508317469940-e3de49ba902e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHNraWxscyUyMGRldnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
         }
         &-2{
             @include bouton_section;
-            background-image: url(https://media.istockphoto.com/photos/system-engineering-concept-engineer-working-in-the-office-gui-picture-id1271620065?b=1&k=20&m=1271620065&s=170667a&w=0&h=XMssvt0DHMNOkg4Bd-00N2U6MfDjiMd9fDQSEIA7Tfk=);
+            background-image: url(https://images.unsplash.com/photo-1531741403586-c19915ad5d0c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGRldiUyMGNzc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+            background-position: center;
         }
     }
 }
@@ -158,6 +159,7 @@ footer, header{
 
 .title{
         @include title;
+        background-image: url(https://images.unsplash.com/photo-1508317469940-e3de49ba902e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHNraWxscyUyMGRldnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
 
 }
 .skills{
@@ -168,34 +170,20 @@ footer, header{
         margin-left: 100px;
         color: rgb(219, 209, 255);
     }
+
+    & fieldset{
+        @include fieldset;
+    }
+
     & .grid{
     
-        height: 1000px;
+        // height: 1000px;
+        height: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr, 1fr, 1fr;
-        margin-bottom: 200px;
+    
         
-
-        & fieldset{
-            margin: 60px 40px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            background-color: rgb(22, 22, 37);
-            padding: 60px;
-            border: none;
-
-            & legend{
-                font-size: 30px;
-                color: rgb(219, 209, 255);
-            }
-
-            & p{
-                color: rgb(219, 209, 255);
-            }
-        }
-        
-
-
         & fieldset:nth-of-type(1){
             grid-column: 1;
             grid-row: 1;
@@ -214,15 +202,21 @@ footer, header{
             grid-column: 1;
             grid-row: 2;
             margin-left: 100px;
-            margin-bottom: 150px;
+            
             
         }
         & fieldset:nth-of-type(4){
             grid-column: 2;
             grid-row: 2;
             margin-right: 100px;
-            margin-bottom: 150px;
+            
         }
         
     }
+    & .flex{
+        height: auto;
+        display: flex;
+        margin: 0 50px 100px 50px;
+
+}
 }
