@@ -41,12 +41,19 @@
     padding: 60px;
     border: none;
     
-    & legend{
+    legend{
         font-size: 30px;
         color: rgb(219, 209, 255);
     }
 
-    & p{
+    p{
         color: rgb(219, 209, 255);
     }
+}
+
+@mixin background_grid{
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }

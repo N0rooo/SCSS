@@ -37,13 +37,13 @@ footer, header{
     color: rgb(219, 209, 255);
     background-color:rgb(29, 29, 49);
     
-    & ul{
+    ul{
         display: flex;
         flex-direction: row;
         justify-content: center;
         cursor: pointer;
 
-        & ul{
+        ul{
             height: 70px;
             display: flex;
             justify-content: center;
@@ -53,12 +53,12 @@ footer, header{
         }
         
         
-        & ul:hover{
+        ul:hover{
             background-color: coral;
         }
     }
 
-    & ul li{
+    ul li{
         list-style-type: none;
         margin: 0 30px;
     }
@@ -69,12 +69,12 @@ footer, header{
     cursor: pointer;
 }
 .index{
-    & section:nth-of-type(1){
+    section:nth-of-type(1){
         display: flex;
         justify-content: center;
         flex-direction: column;
 
-        & .home{
+        .home{
             width: 100%;
             height: 100vh;
             background-color: rgb(103, 101, 101);
@@ -102,11 +102,11 @@ footer, header{
             }
         }
     }
-    & section:nth-of-type(2){
+    section:nth-of-type(2){
         padding: 50px;
         margin-top: 10px;
             
-        & .description{
+        .description{
             display: flex;
             justify-content: center;
             align-items: center;
@@ -117,7 +117,7 @@ footer, header{
             margin-bottom: 50px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 
-            & div:nth-of-type(1){
+            div:nth-of-type(1){
                 width: 150px;
                 height: 150px;
                 background-color: bisque;
@@ -126,11 +126,11 @@ footer, header{
                 background-size: cover;
                 margin-top: 20px;
             }
-            & p{
+            p{
                 padding: 20px;
             }    
         }
-        & div{
+        div{
             display: flex;
             justify-content: center;
             flex-direction: column;
@@ -140,7 +140,7 @@ footer, header{
             
             }
         }
-    & .section{
+    .section{
         width: 100%;
         height: 150px;
 
@@ -157,55 +157,57 @@ footer, header{
 }
 
 
-.title{
-        @include title;
-        background-image: url(https://images.unsplash.com/photo-1508317469940-e3de49ba902e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHNraWxscyUyMGRldnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
 
-}
 .skills{
     
+    .title{
+        @include title;
+        background-image: url(https://images.unsplash.com/photo-1508317469940-e3de49ba902e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHNraWxscyUyMGRldnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+}
 
-    & article{
+    article{
         margin-top: 40px ;
         margin-left: 100px;
         color: rgb(219, 209, 255);
     }
 
-    & fieldset{
+    fieldset{
         @include fieldset;
     }
 
-    & .grid{
+    .grid{
     
         // height: 1000px;
         height: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr, 1fr, 1fr;
+        
     
         
-        & fieldset:nth-of-type(1){
+        fieldset:nth-of-type(1){
             grid-column: 1;
             grid-row: 1;
             margin-left: 100px;
             margin-top: 50px;
             
+            
         }
-        & fieldset:nth-of-type(2){
+        fieldset:nth-of-type(2){
             grid-column: 2;
             grid-row: 1;
             margin-right: 100px;
             margin-top: 50px;
             
         }
-        & fieldset:nth-of-type(3){
+        fieldset:nth-of-type(3){
             grid-column: 1;
             grid-row: 2;
             margin-left: 100px;
             
             
         }
-        & fieldset:nth-of-type(4){
+        fieldset:nth-of-type(4){
             grid-column: 2;
             grid-row: 2;
             margin-right: 100px;
@@ -213,10 +215,104 @@ footer, header{
         }
         
     }
-    & .flex{
+    .flex{
         height: auto;
         display: flex;
         margin: 0 50px 100px 50px;
 
 }
+}
+
+.projects{
+    .title{
+        @include title;
+        background-image: url(https://images.unsplash.com/photo-1531741403586-c19915ad5d0c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGRldiUyMGNzc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+        background-position: bottom;  
+    }
+    article{
+        margin-top: 40px ;
+        margin-left: 100px;
+        color: rgb(219, 209, 255);
+    }
+    fieldset{
+        @include fieldset;
+    }
+    fieldset:nth-of-type(1){
+        
+        .grid{
+            height: 700px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr, 1fr;
+            margin-top: 50px;
+            
+            div:nth-of-type(1){
+                grid-column: 1;
+                grid-row: 1;
+                background-image: url(../rendu_SCSS/img/projects/figma/1.png);
+                @include background_grid;
+            }
+            div:nth-of-type(2){
+                grid-column: 2;
+                grid-row: 1 ;
+                background-image: url(../rendu_SCSS/img/projects/figma/2.png);
+                @include background_grid;
+            }
+            div:nth-of-type(3){
+                grid-column: 3;
+                grid-row: 1;
+                background-image: url(../rendu_SCSS/img/projects/figma/3.png);
+                @include background_grid;
+            }
+            div:nth-of-type(4){
+                grid-column: 4;
+                grid-row: 1;
+                background-image: url(../rendu_SCSS/img/projects/figma/4.png);
+                @include background_grid;
+            }
+            div:nth-of-type(5){
+                grid-column: 5;
+                grid-row: 1;
+                background-image: url(../rendu_SCSS/img/projects/figma/5.png);
+                @include background_grid;
+            }
+            div:nth-of-type(6){
+                grid-column: 6;
+                grid-row: 1;
+                background-image: url(../rendu_SCSS/img/projects/figma/6.png);
+                @include background_grid;
+            }
+            div:nth-of-type(7){
+                grid-column: 7;
+                grid-row: 1;
+                background-image: url(../rendu_SCSS/img/projects/figma/7.png);
+                @include background_grid;
+            }
+            div:nth-of-type(8){
+                grid-column: 8;
+                grid-row: 1;
+                background-image: url(../rendu_SCSS/img/projects/figma/8.png);
+                @include background_grid;
+            }
+            div:nth-of-type(9){
+                grid-column: 9;
+                grid-row: 1;
+                background-image: url(../rendu_SCSS/img/projects/figma/9.png);
+                @include background_grid;
+            }
+            div:nth-of-type(10){
+                grid-column: 1/6;
+                grid-row: 2;
+                background-image: url(../rendu_SCSS/img/projects/figma/10.png);
+                @include background_grid;
+            }
+            div:nth-of-type(11){
+                grid-column: 5/10;
+                grid-row: 2;
+                background-image: url(../rendu_SCSS/img/projects/figma/11.png);
+                @include background_grid;
+            }
+        }
+    }
+    
 }
