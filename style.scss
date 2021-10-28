@@ -160,6 +160,7 @@ footer, header{
 
 .skills{
     
+    
     .title{
         @include title;
         background-image: url(https://images.unsplash.com/photo-1508317469940-e3de49ba902e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHNraWxscyUyMGRldnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
@@ -174,7 +175,7 @@ footer, header{
     fieldset{
         @include fieldset;
     }
-
+    @include xl{
     .grid{
     
         // height: 1000px;
@@ -215,11 +216,13 @@ footer, header{
         }
         
     }
+
     .flex{
         height: auto;
         display: flex;
         margin: 0 50px 100px 50px;
 
+    }
 }
 }
 
@@ -238,13 +241,15 @@ footer, header{
         @include fieldset;
     }
     fieldset:nth-of-type(1){
+        
         .grid{
+            @include xl{
             height: 600px;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             margin-top: 50px;
-
+            }
             div:not(:nth-last-child(-n+2)):hover{
                 scale: 1.1;
             }
@@ -324,6 +329,7 @@ footer, header{
             margin: 40px 0;
         }
         .grid{
+            @include xl{
             display: grid;
             margin: 40px 0;
 
@@ -533,7 +539,7 @@ footer, header{
                 }
             }
         }
-        
+    }
     }
     fieldset:nth-of-type(3){
 
@@ -663,4 +669,28 @@ footer, header{
         }
     }
 
+}
+@include xl{
+    .xs{
+        display: none;
+    }
+}
+
+@include xs{
+    .xs{
+        max-height: 250px;
+        margin: 0 5px;
+    }
+    .grid{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+    }
+}
+@include xxs{
+    .xs{
+        max-height: 140px;
+        
+    }
 }

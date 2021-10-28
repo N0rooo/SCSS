@@ -201,38 +201,40 @@ footer ul li, header ul li {
 .skills fieldset p {
   color: #dbd1ff;
 }
-.skills .grid {
-  height: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-}
-.skills .grid fieldset:nth-of-type(1) {
-  grid-column: 1;
-  grid-row: 1;
-  margin-left: 100px;
-  margin-top: 50px;
-}
-.skills .grid fieldset:nth-of-type(2) {
-  grid-column: 2;
-  grid-row: 1;
-  margin-right: 100px;
-  margin-top: 50px;
-}
-.skills .grid fieldset:nth-of-type(3) {
-  grid-column: 1;
-  grid-row: 2;
-  margin-left: 100px;
-}
-.skills .grid fieldset:nth-of-type(4) {
-  grid-column: 2;
-  grid-row: 2;
-  margin-right: 100px;
-}
-.skills .flex {
-  height: auto;
-  display: flex;
-  margin: 0 50px 100px 50px;
+@media screen and (min-width: 1200px) {
+  .skills .grid {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .skills .grid fieldset:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 100px;
+    margin-top: 50px;
+  }
+  .skills .grid fieldset:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 1;
+    margin-right: 100px;
+    margin-top: 50px;
+  }
+  .skills .grid fieldset:nth-of-type(3) {
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: 100px;
+  }
+  .skills .grid fieldset:nth-of-type(4) {
+    grid-column: 2;
+    grid-row: 2;
+    margin-right: 100px;
+  }
+  .skills .flex {
+    height: auto;
+    display: flex;
+    margin: 0 50px 100px 50px;
+  }
 }
 
 .projects .title {
@@ -271,12 +273,14 @@ footer ul li, header ul li {
 .projects fieldset p {
   color: #dbd1ff;
 }
-.projects fieldset:nth-of-type(1) .grid {
-  height: 600px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  margin-top: 50px;
+@media screen and (min-width: 1200px) {
+  .projects fieldset:nth-of-type(1) .grid {
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 50px;
+  }
 }
 .projects fieldset:nth-of-type(1) .grid div:not(:nth-last-child(-n+2)):hover {
   scale: 1.1;
@@ -384,286 +388,288 @@ footer ul li, header ul li {
   text-align: center;
   margin: 40px 0;
 }
-.projects fieldset:nth-of-type(2) .grid {
-  display: grid;
-  margin: 40px 0;
-}
-.projects fieldset:nth-of-type(2) .grid div:hover {
-  scale: 1.1;
-}
-.projects fieldset:nth-of-type(2) .grid-home {
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  height: 400px;
-}
-.projects fieldset:nth-of-type(2) .grid-home div:nth-of-type(1) {
-  grid-column: 1;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/home_1.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-home div:nth-of-type(2) {
-  grid-column: 2;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/home_2.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-home div:nth-of-type(3) {
-  grid-column: 3;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/home_3.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-home div:nth-of-type(4) {
-  grid-column: 4;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/home_d_1.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-home div:nth-of-type(5) {
-  grid-column: 5;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/home_d_2.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-home div:nth-of-type(6) {
-  grid-column: 6;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/home_d_3.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-tuto {
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  height: 300px;
-}
-.projects fieldset:nth-of-type(2) .grid-tuto div:nth-of-type(1) {
-  grid-column: 1;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/tuto1.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-tuto div:nth-of-type(2) {
-  grid-column: 2;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/tuto2.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-tuto div:nth-of-type(3) {
-  grid-column: 3;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/tuto3.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-tuto div:nth-of-type(4) {
-  grid-column: 4;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/tuto4.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-tuto div:nth-of-type(5) {
-  grid-column: 5;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/tuto5.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-tuto div:nth-of-type(6) {
-  grid-column: 6;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/tuto6.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-tuto div:nth-of-type(7) {
-  grid-column: 7;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/tuto7.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-tuto div:nth-of-type(8) {
-  grid-column: 8;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/tuto8.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-search {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  height: 400px;
-  width: 900px;
-  margin: 40px auto;
-}
-.projects fieldset:nth-of-type(2) .grid-search div:nth-of-type(1) {
-  grid-column: 1;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/filter.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-search div:nth-of-type(2) {
-  grid-column: 2;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/sort.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-search div:nth-of-type(3) {
-  grid-column: 3;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/search_1.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-search div:nth-of-type(4) {
-  grid-column: 4;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/search_2.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-event {
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  height: 400px;
-  width: 1100px;
-  margin: 40px auto;
-}
-.projects fieldset:nth-of-type(2) .grid-event div:nth-of-type(1) {
-  grid-column: 1;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/event_1.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-event div:nth-of-type(2) {
-  grid-column: 2;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/event_2.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-event div:nth-of-type(3) {
-  grid-column: 3;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/event_3.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-event div:nth-of-type(4) {
-  grid-column: 4;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/ticket_1.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-event div:nth-of-type(5) {
-  grid-column: 5;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/ticket_2.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-admin {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  height: 400px;
-  width: 900px;
-  margin: 40px auto;
-}
-.projects fieldset:nth-of-type(2) .grid-admin div:nth-of-type(1) {
-  grid-column: 1;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/profile.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-admin div:nth-of-type(2) {
-  grid-column: 2;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/admin_1.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-admin div:nth-of-type(3) {
-  grid-column: 3;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/admin_2.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(2) .grid-admin div:nth-of-type(4) {
-  grid-column: 4;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/xd/admin_3.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+@media screen and (min-width: 1200px) {
+  .projects fieldset:nth-of-type(2) .grid {
+    display: grid;
+    margin: 40px 0;
+  }
+  .projects fieldset:nth-of-type(2) .grid div:hover {
+    scale: 1.1;
+  }
+  .projects fieldset:nth-of-type(2) .grid-home {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 400px;
+  }
+  .projects fieldset:nth-of-type(2) .grid-home div:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/home_1.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-home div:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/home_2.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-home div:nth-of-type(3) {
+    grid-column: 3;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/home_3.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-home div:nth-of-type(4) {
+    grid-column: 4;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/home_d_1.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-home div:nth-of-type(5) {
+    grid-column: 5;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/home_d_2.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-home div:nth-of-type(6) {
+    grid-column: 6;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/home_d_3.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-tuto {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 300px;
+  }
+  .projects fieldset:nth-of-type(2) .grid-tuto div:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/tuto1.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-tuto div:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/tuto2.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-tuto div:nth-of-type(3) {
+    grid-column: 3;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/tuto3.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-tuto div:nth-of-type(4) {
+    grid-column: 4;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/tuto4.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-tuto div:nth-of-type(5) {
+    grid-column: 5;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/tuto5.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-tuto div:nth-of-type(6) {
+    grid-column: 6;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/tuto6.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-tuto div:nth-of-type(7) {
+    grid-column: 7;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/tuto7.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-tuto div:nth-of-type(8) {
+    grid-column: 8;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/tuto8.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-search {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 400px;
+    width: 900px;
+    margin: 40px auto;
+  }
+  .projects fieldset:nth-of-type(2) .grid-search div:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/filter.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-search div:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/sort.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-search div:nth-of-type(3) {
+    grid-column: 3;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/search_1.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-search div:nth-of-type(4) {
+    grid-column: 4;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/search_2.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-event {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 400px;
+    width: 1100px;
+    margin: 40px auto;
+  }
+  .projects fieldset:nth-of-type(2) .grid-event div:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/event_1.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-event div:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/event_2.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-event div:nth-of-type(3) {
+    grid-column: 3;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/event_3.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-event div:nth-of-type(4) {
+    grid-column: 4;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/ticket_1.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-event div:nth-of-type(5) {
+    grid-column: 5;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/ticket_2.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-admin {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 400px;
+    width: 900px;
+    margin: 40px auto;
+  }
+  .projects fieldset:nth-of-type(2) .grid-admin div:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/profile.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-admin div:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/admin_1.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-admin div:nth-of-type(3) {
+    grid-column: 3;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/admin_2.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(2) .grid-admin div:nth-of-type(4) {
+    grid-column: 4;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/xd/admin_3.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 .projects fieldset:nth-of-type(3) article {
   text-align: center;
@@ -819,6 +825,30 @@ footer ul li, header ul li {
 .projects fieldset:nth-of-type(3) .grid-use p:nth-of-type(3) {
   grid-column: 2;
   grid-row: 3;
+}
+
+@media screen and (min-width: 1200px) {
+  .xs {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .xs {
+    max-height: 250px;
+    margin: 0 5px;
+  }
+
+  .grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .xs {
+    max-height: 140px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
