@@ -1,14 +1,25 @@
-// constante, impossible à modifier ult
-const parallaxHome = document.querySelector('.title');
+//Menu Burger 
+// récupération des éléments HTML Menu Burger
+var menu_burger = document.querySelector('.menu-burger');
+var close = document.querySelector('.x');
+var burger = document.querySelector('.burger');
+var scroll_index = document.querySelector('.slide');
 
-//function effet parallax
-function paral(type){
-    // écoute le sroll sur la page
-    window.addEventListener('scroll', () => { //fonction fléchée, renvoi directement à la "funtion " qui suit sans avoir véritablement à en créer une
-    type.style.backgroundPositionY = window.scrollY / 30 + "%"; //scroll le background sur l'axe Y plus lentelemnt (/30)
-    });
+
+function displayMenu() {
+    menu_burger.classList.toggle('visible');
+    burger.classList.toggle('invisible');
 }
 
-if(document.title == "Home"){    
-    paral(parallaxHome);
+// événements sur les icônes (click)
+burger.addEventListener('click', displayMenu);
+close.addEventListener('click', displayMenu);
+
+function scroll(){
+    window.scrollTo({
+        top: 800,
+        left:0,
+        behavior: "smooth"
+    })
 }
+scroll_index.addEventListener('click', scroll);

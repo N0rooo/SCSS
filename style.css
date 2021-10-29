@@ -27,6 +27,23 @@ h3 {
   font-size: 30px;
 }
 
+p {
+  text-align: justify;
+}
+
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 70px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+}
 footer, header {
   display: flex;
   justify-content: center;
@@ -56,10 +73,75 @@ footer ul li, header ul li {
   margin: 0 30px;
 }
 
+@media screen and (max-width: 1200px) {
+  header {
+    display: none;
+  }
+}
+
+.burger, .x {
+  cursor: pointer;
+  width: 50px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: block;
+}
+@media screen and (min-width: 1200px) {
+  .burger, .x {
+    display: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  .burger, .x {
+    width: 40px;
+  }
+}
+
+.menu-burger {
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: -100px;
+  background-color: rgba(23, 23, 39, 0.9);
+  transform: translateX(-500px);
+  padding-top: 100px;
+  padding-right: 50px;
+  margin-top: 0;
+  z-index: 2;
+}
+.menu-burger li {
+  text-align: center;
+  list-style-type: none;
+  font-size: 20px;
+}
+.menu-burger ul {
+  margin: 5px 0;
+  width: 200px;
+  padding: 20px;
+}
+.menu-burger ul:hover {
+  background-color: coral;
+}
+
+.visible {
+  transform: translateX(0);
+}
+
+.invisible {
+  transform: translateX(-500px);
+}
+
 .slide {
   scale: 2;
   margin-top: 30px;
   cursor: pointer;
+}
+@media screen and (max-width: 1200px) {
+  .slide {
+    display: none;
+  }
 }
 
 .index section:nth-of-type(1) {
@@ -83,6 +165,11 @@ footer ul li, header ul li {
   color: #dbd1ff;
   background-position: center;
 }
+@media screen and (max-width: 1200px) {
+  .index section:nth-of-type(1) .home {
+    height: 50vh;
+  }
+}
 .index section:nth-of-type(1) .home div:nth-of-type(1) {
   width: 800px;
   border: solid 3px #dbd1ff;
@@ -92,6 +179,11 @@ footer ul li, header ul li {
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
+}
+@media screen and (max-width: 1200px) {
+  .index section:nth-of-type(1) .home div:nth-of-type(1) {
+    width: 350px;
+  }
 }
 .index section:nth-of-type(2) {
   padding: 50px;
@@ -253,6 +345,11 @@ footer ul li, header ul li {
   color: #dbd1ff;
   background-image: url(https://images.unsplash.com/photo-1531741403586-c19915ad5d0c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGRldiUyMGNzc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
   background-position: bottom;
+}
+@media screen and (max-width: 1200px) {
+  .projects .title {
+    background-position: left;
+  }
 }
 .projects article {
   margin-top: 40px;
@@ -675,156 +772,165 @@ footer ul li, header ul li {
   text-align: center;
   margin: 40px 0;
 }
-.projects fieldset:nth-of-type(3) .grid {
-  display: grid;
-  margin: 40px 0;
-}
-.projects fieldset:nth-of-type(3) .grid-home {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  height: 400px;
-}
-.projects fieldset:nth-of-type(3) .grid-home div:nth-of-type(1) {
-  grid-column: 1;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/kk/1.png);
+.projects fieldset:nth-of-type(3) p {
   margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
-.projects fieldset:nth-of-type(3) .grid-home div:nth-of-type(2) {
-  grid-column: 2;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/kk/2.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+@media screen and (min-width: 1200px) {
+  .projects fieldset:nth-of-type(3) .grid {
+    display: grid;
+    margin: 40px 0;
+  }
+  .projects fieldset:nth-of-type(3) .grid-home {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 400px;
+  }
+  .projects fieldset:nth-of-type(3) .grid-home div:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/kk/1.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(3) .grid-home div:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/kk/2.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(3) .grid-rubric {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 1300px;
+  }
+  .projects fieldset:nth-of-type(3) .grid-rubric div:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/kk/3.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(3) .grid-rubric div:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/kk/4.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(3) .grid-rubric div:nth-of-type(3) {
+    grid-column: 1;
+    grid-row: 2;
+    background-image: url(../rendu_SCSS/img/projects/kk/5.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(3) .grid-rubric div:nth-of-type(4) {
+    grid-column: 2;
+    grid-row: 2;
+    background-image: url(../rendu_SCSS/img/projects/kk/6.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(3) .grid-rubric div:nth-of-type(5) {
+    grid-column: 1;
+    grid-row: 3;
+    background-image: url(../rendu_SCSS/img/projects/kk/7.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(3) .grid-rubric div:nth-of-type(6) {
+    grid-column: 2;
+    grid-row: 3;
+    background-image: url(../rendu_SCSS/img/projects/kk/8.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(3) .grid-rubric div:nth-of-type(7) {
+    grid-column: 1;
+    grid-row: 4;
+    background-image: url(../rendu_SCSS/img/projects/kk/9.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(3) .grid-rubric div:nth-of-type(8) {
+    grid-column: 2;
+    grid-row: 4;
+    background-image: url(../rendu_SCSS/img/projects/kk/10.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(3) .grid-use {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 1000px;
+  }
+  .projects fieldset:nth-of-type(3) .grid-use div:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 1;
+    background-image: url(../rendu_SCSS/img/projects/kk/11.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(3) .grid-use div:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 2;
+    background-image: url(../rendu_SCSS/img/projects/kk/12.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(3) .grid-use div:nth-of-type(3) {
+    grid-column: 1;
+    grid-row: 3;
+    background-image: url(../rendu_SCSS/img/projects/kk/13.png);
+    margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .projects fieldset:nth-of-type(3) .grid-use p {
+    align-self: center;
+  }
+  .projects fieldset:nth-of-type(3) .grid-use p:nth-of-type(1) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .projects fieldset:nth-of-type(3) .grid-use p:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .projects fieldset:nth-of-type(3) .grid-use p:nth-of-type(3) {
+    grid-column: 2;
+    grid-row: 3;
+  }
 }
-.projects fieldset:nth-of-type(3) .grid-rubric {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  height: 1300px;
-}
-.projects fieldset:nth-of-type(3) .grid-rubric div:nth-of-type(1) {
-  grid-column: 1;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/kk/3.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(3) .grid-rubric div:nth-of-type(2) {
-  grid-column: 2;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/kk/4.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(3) .grid-rubric div:nth-of-type(3) {
-  grid-column: 1;
-  grid-row: 2;
-  background-image: url(../rendu_SCSS/img/projects/kk/5.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(3) .grid-rubric div:nth-of-type(4) {
-  grid-column: 2;
-  grid-row: 2;
-  background-image: url(../rendu_SCSS/img/projects/kk/6.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(3) .grid-rubric div:nth-of-type(5) {
-  grid-column: 1;
-  grid-row: 3;
-  background-image: url(../rendu_SCSS/img/projects/kk/7.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(3) .grid-rubric div:nth-of-type(6) {
-  grid-column: 2;
-  grid-row: 3;
-  background-image: url(../rendu_SCSS/img/projects/kk/8.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(3) .grid-rubric div:nth-of-type(7) {
-  grid-column: 1;
-  grid-row: 4;
-  background-image: url(../rendu_SCSS/img/projects/kk/9.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(3) .grid-rubric div:nth-of-type(8) {
-  grid-column: 2;
-  grid-row: 4;
-  background-image: url(../rendu_SCSS/img/projects/kk/10.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(3) .grid-use {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  height: 1000px;
-}
-.projects fieldset:nth-of-type(3) .grid-use div:nth-of-type(1) {
-  grid-column: 1;
-  grid-row: 1;
-  background-image: url(../rendu_SCSS/img/projects/kk/11.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(3) .grid-use div:nth-of-type(2) {
-  grid-column: 1;
-  grid-row: 2;
-  background-image: url(../rendu_SCSS/img/projects/kk/12.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(3) .grid-use div:nth-of-type(3) {
-  grid-column: 1;
-  grid-row: 3;
-  background-image: url(../rendu_SCSS/img/projects/kk/13.png);
-  margin: 20px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.projects fieldset:nth-of-type(3) .grid-use p {
-  align-self: center;
-}
-.projects fieldset:nth-of-type(3) .grid-use p:nth-of-type(1) {
-  grid-column: 2;
-  grid-row: 1;
-}
-.projects fieldset:nth-of-type(3) .grid-use p:nth-of-type(2) {
-  grid-column: 2;
-  grid-row: 2;
-}
-.projects fieldset:nth-of-type(3) .grid-use p:nth-of-type(3) {
-  grid-column: 2;
-  grid-row: 3;
+
+.xs {
+  max-width: 100%;
 }
 
 @media screen and (min-width: 1200px) {

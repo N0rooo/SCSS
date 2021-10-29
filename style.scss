@@ -27,7 +27,23 @@ h3{
     font-size: 30px;
 }
 
+p{
+    text-align: justify;
+}
 
+@include xs{
+    h1{
+        font-size: 70px;
+    }
+
+    h2{
+        font-size: 40px;
+    }
+
+    h3{
+        font-size: 25px;
+    }
+}
 
 footer, header{
     display: flex;
@@ -63,10 +79,67 @@ footer, header{
         margin: 0 30px;
     }
 }
+header{
+    @include xs{
+        display: none;
+    }
+}
+.burger, .x{
+    cursor: pointer;
+    width: 50px;
+    position:fixed;
+    top: 20px;
+    left: 20px;
+    display: block;
+    @include xl{
+        display: none;
+    }
+    @include xxs{
+        width: 40px;
+    }
+}
+.menu-burger{
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left:0;
+    bottom: -100px;
+    background-color: rgba(23, 23, 39, 0.9);
+    transform: translateX(-500px); 
+    padding-top: 100px;
+    padding-right: 50px;
+    margin-top: 0;
+    z-index: 2;
+
+    li{
+        text-align: center;
+        list-style-type: none;
+        font-size: 20px ;
+    }
+    ul{
+        margin: 5px 0;
+        width: 200px;
+        padding: 20px;
+
+        &:hover{
+            background-color: coral;
+        }
+    }
+}
+.visible{
+    transform: translateX(0);
+}
+.invisible{
+    transform: translateX(-500px); 
+}
+
 .slide{
     scale: 2;
     margin-top: 30px;
     cursor: pointer;
+    @include xs{
+        display: none;;
+    }
 }
 .index{
     section:nth-of-type(1){
@@ -89,6 +162,9 @@ footer, header{
             flex-direction:column;
             color: rgb(219, 209, 255);
             background-position: center;
+            @include xs{
+                height: 50vh;
+            }
             
             & div:nth-of-type(1){
                 width: 800px;
@@ -99,6 +175,9 @@ footer, header{
                 align-items: center;
                 justify-content: center;
                 margin-bottom: 50px;
+                @include xs{
+                    width: 350px;
+                }
             }
         }
     }
@@ -230,7 +309,10 @@ footer, header{
     .title{
         @include title;
         background-image: url(https://images.unsplash.com/photo-1531741403586-c19915ad5d0c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGRldiUyMGNzc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
-        background-position: bottom;  
+        background-position: bottom; 
+        @include xs{
+            background-position: left;
+        } 
     }
     article{
         margin-top: 40px ;
@@ -547,128 +629,133 @@ footer, header{
             text-align: center;
             margin: 40px 0;
         }
+        p{
+            margin: 20px 0;
+        }
         .grid{
-            display: grid;
-            margin: 40px 0;
-            
-            
-            &-home{
-                grid-template-columns: 1fr 1fr ;
-                grid-template-rows: 1fr;
-                height: 400px;
-
-                div:nth-of-type(1){
-                    grid-column: 1;
-                    grid-row: 1;
-                    background-image: url(../rendu_SCSS/img/projects/kk/1.png);
-                    @include background_grid;
-                }
-                div:nth-of-type(2){
-                    grid-column: 2;
-                    grid-row: 1 ;
-                    background-image: url(../rendu_SCSS/img/projects/kk/2.png);
-                    @include background_grid;
-                }
-            }
-            &-rubric{
-                grid-template-columns: 1fr 1fr ;
-                grid-template-rows: 1fr 1fr 1fr 1fr;
-                height: 1300px;
-
-                div:nth-of-type(1){
-                    grid-column: 1;
-                    grid-row: 1;
-                    background-image: url(../rendu_SCSS/img/projects/kk/3.png);
-                    @include background_grid;
-                }
-                div:nth-of-type(2){
-                    grid-column: 2;
-                    grid-row: 1 ;
-                    background-image: url(../rendu_SCSS/img/projects/kk/4.png);
-                    @include background_grid;
-                }
-                div:nth-of-type(3){
-                    grid-column: 1;
-                    grid-row: 2;
-                    background-image: url(../rendu_SCSS/img/projects/kk/5.png);
-                    @include background_grid;
-                }
-                div:nth-of-type(4){
-                    grid-column: 2;
-                    grid-row: 2;
-                    background-image: url(../rendu_SCSS/img/projects/kk/6.png);
-                    @include background_grid;
-                }
-                div:nth-of-type(5){
-                    grid-column: 1;
-                    grid-row: 3;
-                    background-image: url(../rendu_SCSS/img/projects/kk/7.png);
-                    @include background_grid;
-                }
-                div:nth-of-type(6){
-                    grid-column: 2;
-                    grid-row: 3;
-                    background-image: url(../rendu_SCSS/img/projects/kk/8.png);
-                    @include background_grid;
-                }
-                div:nth-of-type(7){
-                    grid-column: 1;
-                    grid-row: 4;
-                    background-image: url(../rendu_SCSS/img/projects/kk/9.png);
-                    @include background_grid;
-                }
-                div:nth-of-type(8){
-                    grid-column: 2;
-                    grid-row: 4;
-                    background-image: url(../rendu_SCSS/img/projects/kk/10.png);
-                    @include background_grid;
-                }
-            }
-
-            &-use{
-                grid-template-columns: 1fr 1fr ;
-                grid-template-rows: 1fr 1fr 1fr;
-                height: 1000px;
+            @include xl{
+                display: grid;
+                margin: 40px 0;
                 
+                &-home{
+                    grid-template-columns: 1fr 1fr ;
+                    grid-template-rows: 1fr;
+                    height: 400px;
 
-                div:nth-of-type(1){
-                    grid-column: 1;
-                    grid-row: 1;
-                    background-image: url(../rendu_SCSS/img/projects/kk/11.png);
-                    @include background_grid;
+                    div:nth-of-type(1){
+                        grid-column: 1;
+                        grid-row: 1;
+                        background-image: url(../rendu_SCSS/img/projects/kk/1.png);
+                        @include background_grid;
+                    }
+                    div:nth-of-type(2){
+                        grid-column: 2;
+                        grid-row: 1 ;
+                        background-image: url(../rendu_SCSS/img/projects/kk/2.png);
+                        @include background_grid;
+                    }
                 }
-                div:nth-of-type(2){
-                    grid-column: 1;
-                    grid-row: 2 ;
-                    background-image: url(../rendu_SCSS/img/projects/kk/12.png);
-                    @include background_grid;
-                }
-                div:nth-of-type(3){
-                    grid-column: 1;
-                    grid-row: 3;
-                    background-image: url(../rendu_SCSS/img/projects/kk/13.png);
-                    @include background_grid;
-                }
-                p{
-                    align-self: center;
-                }
-                p:nth-of-type(1){
-                    grid-column: 2;
-                    grid-row: 1;
-                }
-                p:nth-of-type(2){
-                    grid-column: 2;
-                    grid-row: 2;
-                }
-                p:nth-of-type(3){
-                    grid-column: 2;
-                    grid-row: 3;
+                &-rubric{
+                    grid-template-columns: 1fr 1fr ;
+                    grid-template-rows: 1fr 1fr 1fr 1fr;
+                    height: 1300px;
+
+                    div:nth-of-type(1){
+                        grid-column: 1;
+                        grid-row: 1;
+                        background-image: url(../rendu_SCSS/img/projects/kk/3.png);
+                        @include background_grid;
+                    }
+                    div:nth-of-type(2){
+                        grid-column: 2;
+                        grid-row: 1 ;
+                        background-image: url(../rendu_SCSS/img/projects/kk/4.png);
+                        @include background_grid;
+                    }
+                    div:nth-of-type(3){
+                        grid-column: 1;
+                        grid-row: 2;
+                        background-image: url(../rendu_SCSS/img/projects/kk/5.png);
+                        @include background_grid;
+                    }
+                    div:nth-of-type(4){
+                        grid-column: 2;
+                        grid-row: 2;
+                        background-image: url(../rendu_SCSS/img/projects/kk/6.png);
+                        @include background_grid;
+                    }
+                    div:nth-of-type(5){
+                        grid-column: 1;
+                        grid-row: 3;
+                        background-image: url(../rendu_SCSS/img/projects/kk/7.png);
+                        @include background_grid;
+                    }
+                    div:nth-of-type(6){
+                        grid-column: 2;
+                        grid-row: 3;
+                        background-image: url(../rendu_SCSS/img/projects/kk/8.png);
+                        @include background_grid;
+                    }
+                    div:nth-of-type(7){
+                        grid-column: 1;
+                        grid-row: 4;
+                        background-image: url(../rendu_SCSS/img/projects/kk/9.png);
+                        @include background_grid;
+                    }
+                    div:nth-of-type(8){
+                        grid-column: 2;
+                        grid-row: 4;
+                        background-image: url(../rendu_SCSS/img/projects/kk/10.png);
+                        @include background_grid;
+                    }
                 }
 
+                &-use{
+                    grid-template-columns: 1fr 1fr ;
+                    grid-template-rows: 1fr 1fr 1fr;
+                    height: 1000px;
+                    
+
+                    div:nth-of-type(1){
+                        grid-column: 1;
+                        grid-row: 1;
+                        background-image: url(../rendu_SCSS/img/projects/kk/11.png);
+                        @include background_grid;
+                    }
+                    div:nth-of-type(2){
+                        grid-column: 1;
+                        grid-row: 2 ;
+                        background-image: url(../rendu_SCSS/img/projects/kk/12.png);
+                        @include background_grid;
+                    }
+                    div:nth-of-type(3){
+                        grid-column: 1;
+                        grid-row: 3;
+                        background-image: url(../rendu_SCSS/img/projects/kk/13.png);
+                        @include background_grid;
+                    }
+                    p{
+                        align-self: center;
+                    }
+                    p:nth-of-type(1){
+                        grid-column: 2;
+                        grid-row: 1;
+                    }
+                    p:nth-of-type(2){
+                        grid-column: 2;
+                        grid-row: 2;
+                    }
+                    p:nth-of-type(3){
+                        grid-column: 2;
+                        grid-row: 3;
+                    }
+                }
             }
         }
     }
-
+}
+.xs{
+    max-width: 100%;
 }
 @include xl{
     .xs{
