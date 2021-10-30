@@ -132,6 +132,11 @@ header{
 .invisible{
     transform: translateX(-500px); 
 }
+.visible_p{
+    opacity: 0;
+    height: 0;
+    transition: 0.2s ease-out;
+}
 
 .slide{
     scale: 2;
@@ -236,15 +241,16 @@ header{
 }
 
 
-
 .skills{
-    
-    
+    li{
+        font-size: 20px;
+        color: rgb(219, 209, 255);
+        list-style-type:circle;
+    }
     .title{
         @include title;
         background-image: url(https://images.unsplash.com/photo-1508317469940-e3de49ba902e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHNraWxscyUyMGRldnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
 }
-
     article{
         margin-top: 40px ;
         margin-left: 100px;
@@ -253,56 +259,70 @@ header{
 
     fieldset{
         @include fieldset;
+        @include xs{
+            text-align: center;
+            ul{
+                margin-bottom: 20px;
+            }
+        }
     }
     @include xl{
-    .grid{
-    
-        // height: 1000px;
-        height: auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        
-    
-        
-        fieldset:nth-of-type(1){
-            grid-column: 1;
-            grid-row: 1;
-            margin-left: 100px;
-            margin-top: 50px;
+        .grid{
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
             
+            ul{
+                margin-bottom: 20px;
+            }
             
+            fieldset:nth-of-type(1){
+                grid-column: 1;
+                grid-row: 1;
+                margin-left: 100px;
+                margin-top: 50px;
+            }
+            fieldset:nth-of-type(2){
+                grid-column: 2;
+                grid-row: 1;
+                margin-right: 100px;
+                margin-top: 50px;
+                
+            }
+            fieldset:nth-of-type(3){
+                grid-column: 1;
+                grid-row: 2;
+                margin-left: 100px;
+            
+            }
+            fieldset:nth-of-type(4){
+                grid-column: 2;
+                grid-row: 2;
+                margin-right: 100px;
+            }
         }
-        fieldset:nth-of-type(2){
-            grid-column: 2;
-            grid-row: 1;
-            margin-right: 100px;
-            margin-top: 50px;
-            
-        }
-        fieldset:nth-of-type(3){
-            grid-column: 1;
-            grid-row: 2;
-            margin-left: 100px;
-            
-            
-        }
-        fieldset:nth-of-type(4){
-            grid-column: 2;
-            grid-row: 2;
-            margin-right: 100px;
-            
-        }
-        
-    }
 
-    .flex{
-        height: auto;
+        .flex{
+            height: auto;
+            display: flex;
+            margin: 0 50px 100px 50px;
+            ul{
+                display: flex;
+                justify-content: center;
+            }
+
+            li{
+                margin: 20px 150px;
+            }
+        }
+    }
+    .front, .back, .uiux, .others, .soft{
         display: flex;
-        margin: 0 50px 100px 50px;
-
+        justify-content: center;
+        cursor: pointer;
+        margin-bottom: 20px;
     }
-}
 }
 
 .projects{
