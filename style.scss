@@ -84,6 +84,52 @@ header{
         display: none;
     }
 }
+
+.scrollbar{
+    width: 200px;
+    position: fixed;
+    top: 0;
+    right:0;
+    bottom: -100px;
+    background-color: rgba(23, 23, 39, 0.9);
+    transform: translateX(200px); 
+    padding-top: 100px;
+    padding-left: 10px;
+    padding-right: 225px;
+    margin-top: 0;
+    z-index: 2;
+    color: rgb(219, 209, 255);
+    display: flex;
+
+    &:hover{
+        transform: translateX(0); 
+        .summary{
+            opacity: 0;
+        }
+    }
+    li{
+        text-align: center;
+        list-style-type: none;
+        font-size: 15px ;
+    }
+    ul{
+        margin: 5px 0;
+        width: 200px;
+        padding: 20px;
+        &:hover{
+            background-color: coral;
+        }
+    }
+    .summary{
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        align-self: center;
+        margin-bottom: 300px;
+    }
+
+    
+}
+
 .burger, .x{
     cursor: pointer;
     width: 50px;
@@ -309,11 +355,18 @@ header{
             margin: 0 50px 100px 50px;
             ul{
                 display: flex;
-                justify-content: center;
+                justify-content: space-around;
+                
+                
             }
 
             li{
-                margin: 20px 150px;
+                margin: 20px 80px;
+                text-align: left;
+                width: 100%;
+                text-align: center;
+                
+
             }
         }
     }
@@ -322,6 +375,7 @@ header{
         justify-content: center;
         cursor: pointer;
         margin-bottom: 20px;
+        scale: 1.2;
     }
 }
 
@@ -538,32 +592,26 @@ header{
             }
 
             &-search{
-                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: 1fr;
                 height: 400px;
-                width: 900px;
+                width: 700px;
                 margin: 40px auto;
 
                 div:nth-of-type(1){
                     grid-column: 1;
-                    grid-row: 1;
-                    background-image: url(../rendu_SCSS/img/projects/xd/filter.png);
-                    @include background_grid;
-                }
-                div:nth-of-type(2){
-                    grid-column: 2;
                     grid-row: 1 ;
                     background-image: url(../rendu_SCSS/img/projects/xd/sort.png);
                     @include background_grid;
                 }
-                div:nth-of-type(3){
-                    grid-column: 3;
+                div:nth-of-type(2){
+                    grid-column: 2;
                     grid-row: 1;
                     background-image: url(../rendu_SCSS/img/projects/xd/search_1.png);
                     @include background_grid;
                 }
-                div:nth-of-type(4){
-                    grid-column: 4;
+                div:nth-of-type(3){
+                    grid-column: 3;
                     grid-row: 1;
                     background-image: url(../rendu_SCSS/img/projects/xd/search_2.png);
                     @include background_grid;
@@ -787,6 +835,9 @@ header{
     .xs{
         max-height: 250px;
         margin: 0 5px;
+    }
+    .scrollbar{
+        display: none;
     }
     .grid{
         display: flex;

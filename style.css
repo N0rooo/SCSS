@@ -79,6 +79,48 @@ footer ul li, header ul li {
   }
 }
 
+.scrollbar {
+  width: 200px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: -100px;
+  background-color: rgba(23, 23, 39, 0.9);
+  transform: translateX(200px);
+  padding-top: 100px;
+  padding-left: 10px;
+  padding-right: 225px;
+  margin-top: 0;
+  z-index: 2;
+  color: #dbd1ff;
+  display: flex;
+}
+.scrollbar:hover {
+  transform: translateX(0);
+}
+.scrollbar:hover .summary {
+  opacity: 0;
+}
+.scrollbar li {
+  text-align: center;
+  list-style-type: none;
+  font-size: 15px;
+}
+.scrollbar ul {
+  margin: 5px 0;
+  width: 200px;
+  padding: 20px;
+}
+.scrollbar ul:hover {
+  background-color: coral;
+}
+.scrollbar .summary {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  align-self: center;
+  margin-bottom: 300px;
+}
+
 .burger, .x {
   cursor: pointer;
   width: 50px;
@@ -351,10 +393,13 @@ footer ul li, header ul li {
   }
   .skills .flex ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
   }
   .skills .flex li {
-    margin: 20px 150px;
+    margin: 20px 80px;
+    text-align: left;
+    width: 100%;
+    text-align: center;
   }
 }
 .skills .front, .skills .back, .skills .uiux, .skills .others, .skills .soft {
@@ -362,6 +407,7 @@ footer ul li, header ul li {
   justify-content: center;
   cursor: pointer;
   margin-bottom: 20px;
+  scale: 1.2;
 }
 
 .projects .title {
@@ -665,16 +711,16 @@ footer ul li, header ul li {
     background-position: center;
   }
   .projects fieldset:nth-of-type(2) .grid-search {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     height: 400px;
-    width: 900px;
+    width: 700px;
     margin: 40px auto;
   }
   .projects fieldset:nth-of-type(2) .grid-search div:nth-of-type(1) {
     grid-column: 1;
     grid-row: 1;
-    background-image: url(../rendu_SCSS/img/projects/xd/filter.png);
+    background-image: url(../rendu_SCSS/img/projects/xd/sort.png);
     margin: 20px 0;
     background-size: contain;
     background-repeat: no-repeat;
@@ -683,7 +729,7 @@ footer ul li, header ul li {
   .projects fieldset:nth-of-type(2) .grid-search div:nth-of-type(2) {
     grid-column: 2;
     grid-row: 1;
-    background-image: url(../rendu_SCSS/img/projects/xd/sort.png);
+    background-image: url(../rendu_SCSS/img/projects/xd/search_1.png);
     margin: 20px 0;
     background-size: contain;
     background-repeat: no-repeat;
@@ -691,15 +737,6 @@ footer ul li, header ul li {
   }
   .projects fieldset:nth-of-type(2) .grid-search div:nth-of-type(3) {
     grid-column: 3;
-    grid-row: 1;
-    background-image: url(../rendu_SCSS/img/projects/xd/search_1.png);
-    margin: 20px 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .projects fieldset:nth-of-type(2) .grid-search div:nth-of-type(4) {
-    grid-column: 4;
     grid-row: 1;
     background-image: url(../rendu_SCSS/img/projects/xd/search_2.png);
     margin: 20px 0;
@@ -977,6 +1014,10 @@ footer ul li, header ul li {
   .xs {
     max-height: 250px;
     margin: 0 5px;
+  }
+
+  .scrollbar {
+    display: none;
   }
 
   .grid {
