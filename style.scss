@@ -31,6 +31,7 @@ p{
     text-align: justify;
 }
 
+// Responsive <1200px
 @include xs{
     h1{
         font-size: 70px;
@@ -85,6 +86,7 @@ header{
     }
 }
 
+// Summary
 .scrollbar{
     width: 200px;
     position: fixed;
@@ -116,6 +118,7 @@ header{
         margin: 5px 0;
         width: 200px;
         padding: 20px;
+        cursor: pointer;
         &:hover{
             background-color: coral;
         }
@@ -129,7 +132,7 @@ header{
 
     
 }
-
+// Burger Responsive
 .burger, .x{
     cursor: pointer;
     width: 50px;
@@ -172,6 +175,8 @@ header{
         }
     }
 }
+
+// Toggles
 .visible{
     transform: translateX(0);
 }
@@ -184,6 +189,7 @@ header{
     transition: 0.2s ease-out;
 }
 
+// Scroll arrow
 .slide{
     scale: 2;
     margin-top: 30px;
@@ -192,6 +198,8 @@ header{
         display: none;;
     }
 }
+
+// Home page
 .index{
     section:nth-of-type(1){
         display: flex;
@@ -286,7 +294,7 @@ header{
     }
 }
 
-
+// Skills page
 .skills{
     li{
         font-size: 20px;
@@ -313,6 +321,7 @@ header{
         }
     }
     @include xl{
+        // Hardskills
         .grid{
             height: auto;
             display: grid;
@@ -348,7 +357,7 @@ header{
                 margin-right: 100px;
             }
         }
-
+// Softskills
         .flex{
             height: auto;
             display: flex;
@@ -370,6 +379,8 @@ header{
             }
         }
     }
+
+    // Summary Skills page
     .front, .back, .uiux, .others, .soft{
         display: flex;
         justify-content: center;
@@ -379,6 +390,7 @@ header{
     }
 }
 
+// Projects page
 .projects{
     .title{
         @include title;
@@ -396,6 +408,7 @@ header{
     fieldset{
         @include fieldset;
     }
+    // Teacher mobile application
     fieldset:nth-of-type(1){
         
         .grid{
@@ -478,6 +491,7 @@ header{
             }
         }
     }
+    // PULV events application
     fieldset:nth-of-type(2){
 
         article{
@@ -691,6 +705,7 @@ header{
         }
     }
     }
+    // Ken Kaneki Project 
     fieldset:nth-of-type(3){
 
         article{

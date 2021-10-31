@@ -1,5 +1,4 @@
-//Menu Burger 
-// récupération des éléments HTML Menu Burger
+//Burger
 var menu_burger = document.querySelector('.menu-burger');
 var close = document.querySelector('.x');
 var burger = document.querySelector('.burger');
@@ -11,10 +10,12 @@ function displayMenu() {
     burger.classList.toggle('invisible');
 }
 
-// événements sur les icônes (click)
+//events on click
 burger.addEventListener('click', displayMenu);
 close.addEventListener('click', displayMenu);
 
+
+//scroll arrow (Home page)
 var scroll_index = document.querySelector('.slide');
 
 if (document.title == "Home"){
@@ -28,7 +29,7 @@ if (document.title == "Home"){
     scroll_index.addEventListener('click', scroll);
 }
 
-// Display p
+// Display p (Skills page)
 var front = document.querySelector('.front');
 var front_p = document.querySelector('.front_p');
 var front_s = document.querySelector('.s_front');
@@ -43,6 +44,7 @@ var uiux_s = document.querySelector('.s_uiux');
 var others = document.querySelector('.others');
 var others_p = document.querySelector('.others_p');
 
+//Summary (Skills page)
 var soft = document.querySelector('.soft');
 var soft_p = document.querySelector('.soft_p');
 var soft_s = document.querySelector('.s_soft');
@@ -71,7 +73,7 @@ if (document.title == "Skills"){
     soft_s.addEventListener('click', () => scrolls(1570));
 }
 
-// Summary
+// Summary (Projects page)
 var mobile = document.querySelector('.mobile');
 var teacher = document.querySelector('.teacher');
 var pulv = document.querySelector('.pulv');
