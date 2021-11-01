@@ -289,6 +289,11 @@ footer ul li, header ul li {
 .index .section-1:hover {
   border: 1px solid #ff9f7c;
 }
+@media screen and (max-width: 1200px) {
+  .index .section-1 {
+    width: 400px;
+  }
+}
 .index .section-2 {
   width: 700px;
   background-color: darkgray;
@@ -305,6 +310,11 @@ footer ul li, header ul li {
 }
 .index .section-2:hover {
   border: 1px solid #ff9f7c;
+}
+@media screen and (max-width: 1200px) {
+  .index .section-2 {
+    width: 400px;
+  }
 }
 
 .skills li {
