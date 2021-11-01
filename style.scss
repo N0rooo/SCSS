@@ -286,7 +286,7 @@ header{
             @include bouton_section;
             background-image: url(https://images.unsplash.com/photo-1508317469940-e3de49ba902e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHNraWxscyUyMGRldnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
             @include xs{
-                width: 400px;
+                width: 300px;
             }
         }
         &-2{
@@ -294,7 +294,7 @@ header{
             background-image: url(https://images.unsplash.com/photo-1531741403586-c19915ad5d0c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGRldiUyMGNzc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
             background-position: center;
             @include xs{
-                width: 400px;
+                width: 300px;
             }
         }
     }
