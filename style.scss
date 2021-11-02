@@ -223,6 +223,8 @@ header{
             background-position: center;
             @include xs{
                 height: 50vh;
+                background-size: 200%;
+                background-position: top;
             }
             
             & div:nth-of-type(1){

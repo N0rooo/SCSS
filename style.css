@@ -217,6 +217,8 @@ footer ul li, header ul li {
 @media screen and (max-width: 1200px) {
   .index section:nth-of-type(1) .home {
     height: 50vh;
+    background-size: 200%;
+    background-position: top;
   }
 }
 .index section:nth-of-type(1) .home div:nth-of-type(1) {
