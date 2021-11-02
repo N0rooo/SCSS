@@ -342,6 +342,7 @@ footer ul li, header ul li {
   .skills .title {
     background-size: auto;
     height: 200px;
+    background-position: top;
   }
 }
 .skills article {
@@ -448,7 +449,7 @@ footer ul li, header ul li {
   .projects .title {
     background-size: auto;
     height: 200px;
-    background-position: center;
+    background-position: left top;
   }
 }
 .projects article {

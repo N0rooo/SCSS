@@ -223,8 +223,6 @@ header{
             background-position: center;
             @include xs{
                 height: 50vh;
-                
-                
             }
             
             & div:nth-of-type(1){
@@ -315,6 +313,7 @@ header{
         @include xs{
             background-size:auto;
             height: 200px;
+            background-position: top;
         }
     }
         
@@ -412,7 +411,7 @@ header{
         @include xs{
             background-size:auto;
             height: 200px;
-            background-position: center;
+            background-position: left top;
         }
     }
     article{
