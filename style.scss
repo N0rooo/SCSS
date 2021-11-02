@@ -88,25 +88,27 @@ header{
 
 // Summary
 .scrollbar{
-    width: 200px;
+    width: 260px;
     position: fixed;
     top: 0;
     right:0;
     bottom: -100px;
-    background-color: rgba(23, 23, 39, 0.9);
+    background-color: rgba(16, 16, 27, 0.9);
     transform: translateX(200px); 
     padding-top: 100px;
-    padding-left: 10px;
-    padding-right: 225px;
+    padding-left: 30px;
+    padding-right: 200px;
     margin-top: 0;
     z-index: 2;
     color: rgb(219, 209, 255);
     display: flex;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    
 
     &:hover{
         transform: translateX(0); 
         .summary{
-            opacity: 0;
+            display: none;
         }
     }
     li{
@@ -128,6 +130,8 @@ header{
         text-orientation: upright;
         align-self: center;
         margin-bottom: 300px;
+        opacity: 1;
+        
     }
 
     
@@ -311,6 +315,7 @@ header{
     }
     .title{
         @include title;
+        background-position:top;
         background-image: url(https://images.unsplash.com/photo-1508317469940-e3de49ba902e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHNraWxscyUyMGRldnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
         @include xs{
             background-size:auto;

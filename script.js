@@ -94,3 +94,25 @@ if (document.title == "Projects"){
     website.addEventListener('click', () => scroll(4980));
     kk.addEventListener('click', () => scroll(5100));
 }
+
+//Scroll reveal 
+//Animate elements apparition
+const sr = ScrollReveal();
+
+sr.reveal('section', {
+    duration: 1500,
+    distance: '100px',
+});
+sr.reveal('div', {
+    
+    duration: 1000,
+    distance: '100px',
+    delay: 200,
+    
+});
+
+sr.reveal('fieldset', {
+    distance: '500px',
+    duration: 1000,
+})
+
