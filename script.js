@@ -101,18 +101,26 @@ const sr = ScrollReveal();
 
 sr.reveal('section', {
     duration: 1500,
-    distance: '100px',
+    distance: '50px',
 });
 sr.reveal('div', {
     
     duration: 1000,
-    distance: '100px',
+    distance: '50px',
     delay: 200,
     
 });
 
 sr.reveal('fieldset', {
-    distance: '500px',
+    distance: '50px',
     duration: 1000,
 })
+
+sr.reveal('h2', {
+    distance: '50px',
+    delay: 100,
+    duration: 800,
+})
+
+
 
