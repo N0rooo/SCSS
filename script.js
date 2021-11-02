@@ -122,5 +122,11 @@ sr.reveal('h2', {
     duration: 800,
 })
 
+sr.reveal('p', {
+    distance: '50px',
+    delay: 100,
+    duration: 800,
+})
+
 
 
